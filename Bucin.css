@@ -1,0 +1,390 @@
+/* General Styles */
+body {
+  font-family: 'Playfair Display', serif;
+  color: #4a4a4a;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background: url('Tata7.jpg') no-repeat center center/cover; /* Gambar latar belakang */
+  background-attachment: fixed; /* Parallax effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+}
+
+.hero-section .content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  letter-spacing: 3px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-section p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+/* Add custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Letter Section */
+.letter-section {
+  background: #f8f9fa;
+  padding: 50px 0;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-family: 'Great Vibes', cursive;
+  color: #ff6f61;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Button */
+.btn-primary {
+  background-color: #ff6f61;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #ff4a3d;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Carousel - Responsif */
+.carousel-item img {
+  width: 100%;
+  height: auto; /* Menjaga aspek rasio gambar */
+  object-fit: cover; /* Menyesuaikan gambar agar mengisi area tanpa distorsi */
+  transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+}
+
+/* Untuk perangkat PC/Desktop (Lebih besar dari 1024px) */
+@media (min-width: 1024px) {
+  .carousel-item img {
+    height: 60vh; /* Gambar akan mengisi 60% dari tinggi viewport */
+    object-position: center; /* Menjaga gambar tetap terpusat */
+  }
+}
+
+/* Untuk tablet dan perangkat dengan lebar layar antara 768px dan 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .carousel-item img {
+    height: 50vh; /* Menurunkan tinggi gambar pada tablet */
+  }
+}
+
+/* Untuk perangkat mobile (screen width kurang dari 768px) */
+@media (max-width: 767px) {
+  .carousel-item img {
+    height: 40vh; /* Menurunkan tinggi gambar lebih banyak untuk ponsel */
+  }
+}
+
+
+
+
+/* Romantic Header */
+.romantic-header {
+  background: #f8f9fa;
+  padding: 5rem 0;
+}
+
+.romantic-header .content h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+}
+
+.romantic-header .content p {
+  font-size: 1.25rem;
+  color: #6c757d;
+}
+
+/* Single Couple Photo Styling */
+.couple-photo-container {
+  display: inline-block;
+  border-radius: 15px; /* Rounded corners */
+  overflow: hidden; /* Ensure image stays within rounded edges */
+  border: 4px solid #ff6f61; /* Thin border for a modern touch */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-top: 2rem;
+}
+
+.couple-photo {
+  width: 100%; /* Ensures image is responsive */
+  height: auto;
+  transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+}
+
+/* Hover effect */
+.couple-photo-container:hover .couple-photo {
+  transform: scale(1.1); /* Slight zoom effect when hovered */
+}
+
+/* Responsive Design for Various Devices */
+@media (max-width: 768px) {
+  .romantic-header .content h1 {
+    font-size: 2.5rem; /* Adjusting font size for tablets */
+  }
+
+  .romantic-header .content p {
+    font-size: 1.2rem; /* Adjusting text size for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .romantic-header .content h1 {
+    font-size: 2rem; /* Further reducing font size for mobile */
+  }
+
+  .romantic-header .content p {
+    font-size: 1rem; /* Adjusting text size for mobile */
+  }
+
+  .couple-photo-container {
+    width: 90%; /* Making photo container responsive */
+    margin: 0 auto;
+  }
+}
+
+.footer-section {
+  background: linear-gradient(45deg, #ff6f61, #ff4a3d); /* Gradasi warna yang lembut */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  width: 100%;
+}
+
+.footer-section p {
+  font-size: 1rem;
+  margin: 0;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.footer-section p .footer-name {
+  font-weight: bold;
+  color: #fff; /* Memberikan penekanan pada nama */
+  font-size: 1.1rem;
+}
+
+.footer-section p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: lighter;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-section p a:hover {
+  color: #ff6f61; /* Warna hover untuk tautan */
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+.footer-section p a:active {
+  transform: scale(1);
+}
+
+/* Untuk perangkat mobile (Android) */
+@media (max-width: 767px) {
+  .footer-section {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+  }
+}
+
+/* Tambahan untuk desktop dan tablet untuk memperbaiki penempatan footer */
+@media (min-width: 768px) {
+  .footer-section {
+    position: relative; /* Menjaga footer tetap di bawah jika ada banyak konten */
+  }
+}
+
+/* Hidden Message */
+#hiddenMessage {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #ff6f61;
+}
+/* Love Calculator */
+.love-calculator {
+  background: #f8f9fa;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  max-width: 400px;
+}
+
+.love-calculator h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #ff6f61;
+  margin-bottom: 20px;
+}
+
+.love-calculator input {
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.love-calculator button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.love-calculator button:hover {
+  background-color: #ff4a3d;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.result-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #ff6f61;
+}
+
+/* Menghilangkan tombol play */
+.play-button {
+  display: none; /* Sembunyikan tombol play */
+}
+
+/* Audio Progress Bar dan Volume tetap ditampilkan */
+.audio-progress-container, .volume-container {
+  display: block;
+}
+
+#popupMessage {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  background: rgba(255, 255, 255, 0.9); /* Latar belakang putih dengan transparansi rendah */
+  color: #333; /* Warna teks gelap untuk kontras yang lebih baik */
+  padding: 30px;
+  border-radius: 20px;
+  z-index: 9999;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  max-width: 90%;
+  text-align: center;
+  font-size: 1.4rem;
+  animation: popupIn 0.8s ease-out, glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes popupIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 105, 180, 1);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(255, 105, 180, 1);
+  }
+}
+
+#popupMessage p {
+  font-size: 1.4rem; /* Ukuran font lebih besar untuk kenyamanan membaca */
+  color: #333; /* Warna teks lebih gelap */
+  line-height: 1.6; /* Jarak antar baris lebih lebar agar lebih mudah dibaca */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Bayangan lembut pada teks untuk kontras */
+}
+
+#popupMessage button {
+  margin-top: 20px;
+  background-color: #ff6f61;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#popupMessage button:hover {
+  background-color: #ff4a3d;
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#popupMessage button:active {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 105, 180, 1); /* Efek glow saat tombol ditekan */
+}
